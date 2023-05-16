@@ -36,7 +36,7 @@ export default {
   created(){
 this.$http.get('http://localhost:3000/v1/fotos')
 .then(res => res.json())
-.then(fotos => this.fotos = fotos)
+.then(fotos => this.fotos = fotos, error => console.log(error))
 //  console.log(fotos);
   }
 
