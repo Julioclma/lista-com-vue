@@ -15,6 +15,11 @@
 </template>
 
 <script>
+
+
+
+
+
 export default {
 
   data() {
@@ -22,20 +27,21 @@ export default {
       titulo: 'Fotografias',
 
       fotos: [
-        {
-          url: 'https://www.vocenaneve.com.br/app/uploads/2022/07/Denali-1.jpg',
-          titulo: 'Montanha no Gelo'
-        },
-        {
-          url: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/2b/28/01/pedra-da-gavea.jpg?w=500&h=-1&s=1',
-          titulo: 'Rio de Janeiro Montanha Incrivel'
-        }
-
+      
       ]
     }
+    
+  },
+  
+  created(){
+this.$http.get('http://localhost:3000/v1/fotos')
+.then(res => res.json())
+.then(fotos => this.fotos = fotos)
+//  console.log(fotos);
   }
 
 }
+
 </script>
 
 <style>
