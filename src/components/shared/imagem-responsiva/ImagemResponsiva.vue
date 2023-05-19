@@ -1,5 +1,5 @@
 <template>
-    <img :src="url" :alt="titulo" />
+    <img class="img-responsiva" :src="url" :alt="titulo" />
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 .img-responsiva {
     width: 100%;
 }

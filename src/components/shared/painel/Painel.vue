@@ -17,7 +17,7 @@
 
 export default {
 
-  props: ['titulo', 'url'],
+  props: ['titulo'],
 
   data() {
     return {
